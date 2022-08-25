@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+				
+				
+		<bean id="owner" class="com.spring.objectCollectionMap.Owner" >
+   				<property name="ownerName" value="Aman Saini" />
+   		</bean>
+						
+		<bean id="address" class="com.spring.objectCollectionMap.Address" >
+   				<property name="address" value="SAharanpur UP" />
+   		</bean>	
+				
+		<bean id="house" class="com.spring.objectCollectionMap.House" >
+			<property name="houseName" value="GHAR" />
+			
+			<property name="mapData">  
+				<map>  
+				<entry key-ref="address" value-ref="owner"></entry>   
+				</map>  
+			</property>
+   		</bean>
+   	
+    
+</beans>

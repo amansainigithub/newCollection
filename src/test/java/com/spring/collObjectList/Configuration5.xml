@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+				
+				
+	
+	
+	<bean id="state1" class="com.spring.collObjectList.State">
+	 	<property name="stateName" value="UP"></property>
+	</bean>
+	
+	<bean id="state2" class="com.spring.collObjectList.State">
+	 	<property name="stateName" value="Assan"></property>
+	</bean>
+	
+	<bean id="state3" class="com.spring.collObjectList.State">
+	 	<property name="stateName" value="punjab"></property>
+	</bean>
+	
+	<bean id="state4" class="com.spring.collObjectList.State">
+	 	<property name="stateName" value="Haryana"></property>
+	</bean>
+	
+   	
+   				
+		<bean id="country" class="com.spring.collObjectList.Country" >
+   			
+   			<property name="id" value="100" />
+   			
+   			<property name="countryName" value="INDIA" />
+   			
+   			
+   					<property name="state">
+	   						<list>
+	   							<ref bean="state1"/>  
+	   							<ref bean="state2"/>  
+	   							<ref bean="state3"/> 
+	   							<ref bean="state4"/> 
+	   						</list>
+					</property>
+   				
+   		</bean>
+	
+ 
+    
+</beans>

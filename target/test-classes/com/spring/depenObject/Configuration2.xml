@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+				
+				
+				
+		<bean id="battery1" class="com.spring.depenObject.Battery" >
+   			
+   			<property name="id">
+   				<value>555</value>
+   			</property>
+   			
+   			<property name="batteryModel">
+   				<value>LITHIUM</value>
+   			</property>
+   				
+   		</bean>
+	
+   	
+   	
+   		<bean id="laptop1" class="com.spring.depenObject.Laptop" >
+   		
+   			<property name="id" >
+   				<value type="long">
+   					100
+   				</value>
+   			</property>
+   			
+   			<property name="laptopName">
+   				<value>Dell</value>
+   			</property>
+   			
+   			<property name="battery" ref="battery1" ></property>
+   			
+   			
+   		</bean>
+ 
+    
+</beans>
